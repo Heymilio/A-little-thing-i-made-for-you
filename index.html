@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>a little thing i made for you</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Patrick+Hand&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="app" class="app">
+    <div id="ambient" class="ambient" aria-hidden="true"></div>
+    <div id="doodles" class="doodles" aria-hidden="true"></div>
+
+    <section id="home" class="screen home-screen">
+      <div class="home-content">
+        <p class="eyebrow">a little thing</p>
+        <h1>a little thing i made for you</h1>
+        <button id="startBtn" class="primary-btn">comenzar</button>
+      </div>
+    </section>
+
+    <section id="game" class="screen game-screen hidden" aria-live="polite">
+      <header class="topbar">
+        <span id="stageLabel">01</span>
+        <button id="musicBtn" class="music-btn" aria-label="Pausar música">♫</button>
+      </header>
+
+      <div class="game-content">
+        <div id="instruction" class="instruction"></div>
+        <div id="miniGame" class="mini-game"></div>
+        <div id="hintBox" class="hint-box hidden"></div>
+        <button id="continueBtn" class="continue-btn hidden">continuar →</button>
+      </div>
+
+      <div id="progress" class="progress" aria-label="Progreso"></div>
+    </section>
+
+    <section id="final" class="screen final-screen hidden">
+      <div id="finalContent" class="final-content"></div>
+    </section>
+
+    <audio id="bgMusic" loop preload="metadata">
+      <source src="assets/audio/every-summertime.mp3" type="audio/mpeg">
+    </audio>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
